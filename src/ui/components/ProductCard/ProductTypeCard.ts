@@ -4,5 +4,4 @@ export type ProductCardType = {
   price: number;
   category: string;
   isNew: boolean;
-  deleteHandler: (id: number) => void;
 };

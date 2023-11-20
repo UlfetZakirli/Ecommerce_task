@@ -25,10 +25,6 @@ const ProductDetailPage = () => {
             </h2>
             <p>{description}</p>
             <p className="stat-value fo text-base">${price}</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-success">Edit</button>
-              <button className="btn bg-red-600 text-white">Delete</button>
-            </div>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import ProductForm from '../ProductForm'
 import { useEditProduct, useProduct } from 'src/app/api/productApi'
 import { useParams } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const EditProduct = () => {
     const { productId } = useParams()
@@ -14,6 +15,7 @@ const EditProduct = () => {
 
     const editHandler = (product: any) => {
         editProduct.mutate({ productId, ...product })
+        toast.success('📝 Product updated successfully!')
     }
 
     return (

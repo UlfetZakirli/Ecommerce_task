@@ -1,11 +1,12 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { ERevalidateTags } from '../../data/enums/revalidate_tags.enum'
 import product_repository from '../repositories/implementaiton/product_repository'
+import { toast } from 'react-toastify'
 
-export const useProducts = (query: string = '') => {
+export const useProducts = (query: string) => {
     return useQuery({
-        queryKey: [ERevalidateTags.PRODUCTS],
-        queryFn: () => product_repository.getProducts(query)
+        queryKey: [ERevalidateTags.PRODUCTS, query],
+        queryFn: () => product_repository.getProducts(query),
     })
 }
 
@@ -22,7 +23,8 @@ export const useAddProduct = () => {
         mutationFn: (product: any) => product_repository.addProduct(product),
         onError: (_error, _variables, context) => {
             // queryClient.setQueryData([ERevalidateTags.PRODUCTS])
-            console.log(_error);
+            toast.error("Unable to add product!")
+
         },
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: [ERevalidateTags.PRODUCTS] })
@@ -35,7 +37,7 @@ export const useDeleteProduct = () => {
     return useMutation({
         mutationFn: (id: number) => product_repository.deleteProduct(id),
         onError: (_error) => {
-            console.log(_error);
+            toast.error("Unable to delete product!")
         },
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: [ERevalidateTags.PRODUCTS] })
@@ -48,7 +50,7 @@ export const useEditProduct = () => {
     return useMutation({
         mutationFn: (product: any) => product_repository.updateProduct(product),
         onError: (_error) => {
-            console.log(_error);
+            toast.error('Unable to update product!')
         },
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: [ERevalidateTags.PRODUCTS] })

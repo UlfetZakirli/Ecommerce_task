@@ -1,8 +1,10 @@
-import React from 'react'
+import Toast from "src/ui/shared/Toast"
 
 const HomePage = () => {
   return (
-    <div className='text-center  my-5'>HomePage</div>
+    <div className='text-center  my-5'>
+      <Toast />
+      HomePage</div>
   )
 }
 

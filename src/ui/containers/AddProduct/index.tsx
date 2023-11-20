@@ -1,11 +1,13 @@
 import React from 'react'
 import ProductForm from '../ProductForm'
 import { useAddProduct } from 'src/app/api/productApi'
+import { toast } from 'react-toastify'
 
 const AddProduct = () => {
     const addProduct = useAddProduct()
     const handleAddProduct = (product: any) => {
         addProduct.mutate(product)
+        toast.success('📬 Product added successfully!')
     }
     return (
         <div>

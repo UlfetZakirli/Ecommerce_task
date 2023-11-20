@@ -1,4 +1,4 @@
 export const endpoints = {
-  products: (query: string = "") => `/products/${query}`,
+  products: (query: string = "") => `/products?q=${query}`,
   product: (id: number) => `/products/${id}`,
 };
