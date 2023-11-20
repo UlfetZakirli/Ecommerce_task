@@ -2,8 +2,8 @@ import { PhotoIcon } from '@heroicons/react/24/solid'
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { ProductDSO } from 'src/data/dso/product.ds'
-import { addProductSchema } from 'src/data/schemas/formValidations/addProductSchema'
+import { ProductDSO } from '@/data/dso/product.ds'
+import { addProductSchema } from '@/data/schemas/formValidations/addProductSchema'
 import { ProductFormType } from './productForm'
 
 

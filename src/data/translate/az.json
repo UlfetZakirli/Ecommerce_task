@@ -1,5 +1,11 @@
 {
   "app_title": "Alış-veriş",
   "product_list": "Məhsul siyahısı",
-  "add_product": "Məhsul əlavə edin"
+  "add_product": "Məhsul əlavə edin",
+  "delete_success": "🚀 Məhsul uğurla silindi!",
+  "add_success": "📬 Məhsul uğurla əlavə edildi!",
+  "edit_success": "📝 Məhsul uğurla yeniləndi!",
+  "delete_action": "Sil",
+  "edit_action": "Redaktə et",
+  "back_to_list": "Məhsul siyahısına qayıt"
 }

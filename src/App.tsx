@@ -1,8 +1,8 @@
 import React from 'react'
-import AppRoutes from './app/routes'
+import AppRoutes from '@/app/routes'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import Toast from './ui/shared/Toast'
+import Toast from '@/ui/shared/Toast'
 
 const App = () => {
 

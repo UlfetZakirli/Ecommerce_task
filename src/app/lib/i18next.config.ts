@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { az, en, ar } from "../../data/translate";
+import { az, en, ar } from "@/data/translate";
 import LanguageDetector from "i18next-browser-languagedetector";
 
 export const languageResource = {

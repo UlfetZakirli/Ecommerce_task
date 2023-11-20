@@ -40,9 +40,16 @@ const Header = () => {
                             <ul className="p-2 bg-base-100 mm">
                                 {
                                     Object.values(languageResource).map((lng) => (
-                                        <li key={lng.code} >
-                                            <button onClick={() => handleLanguageChange(lng.code)}>
-                                                <span className={`fi fi-${lng.country_code}`}></span> {lng.name}
+                                        <li key={lng.code}>
+                                            <button
+                                                onClick={() => handleLanguageChange(lng.code)}
+                                                disabled={lng.code === currentLanguageCode}
+                                                className={`${lng.code === currentLanguageCode && 'bg-gray-300'}`}
+                                            >
+                                                <span
+                                                    className={`fi fi-${lng.country_code} `}>
+                                                </span>
+                                                {lng.name}
                                             </button>
                                         </li>
                                     ))

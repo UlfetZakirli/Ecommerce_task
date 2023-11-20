@@ -1,5 +1,5 @@
-import { endpoints } from "../../data/utils/endpoints";
-import axiosInstance from "../lib/axios.config";
+import { endpoints } from "@/data/utils/endpoints";
+import axiosInstance from "@/app/lib/axios.config";
 
 export const getProductsService = async (query: string) => {
   const res = await axiosInstance.get(endpoints.products(query));

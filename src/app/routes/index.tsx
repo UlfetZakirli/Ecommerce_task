@@ -1,11 +1,11 @@
-import MainLayout from "../../ui/layout/MainLayout"
 import { useRoutes, RouteObject } from 'react-router-dom'
-import HomePage from "../../ui/pages/home/HomePage"
-import ProductList from "../../ui/containers/ProductList"
-import ProductDetailPage from "../../ui/pages/products/details/ProductDetailPage"
-import NotFound from "../../ui/pages/common/NotFound"
-import AddProduct from "src/ui/containers/AddProduct"
-import EditProduct from "src/ui/containers/EditProduct"
+import MainLayout from '@/ui/layout/MainLayout'
+import HomePage from '@/ui/pages/home/HomePage'
+import AddProduct from '@/ui/containers/AddProduct'
+import EditProduct from '@/ui/containers/EditProduct'
+import NotFound from '@/ui/pages/common/NotFound'
+import ProductList from '@/ui/containers/ProductList'
+import ProductDetailPage from '@/ui/pages/products/details/ProductDetailPage'
 
 
 

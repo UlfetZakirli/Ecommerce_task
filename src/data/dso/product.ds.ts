@@ -1,4 +1,4 @@
 import { z } from "zod";
-import { addProductSchema } from "../schemas/formValidations/addProductSchema";
+import { addProductSchema } from "@/data/schemas/formValidations/addProductSchema";
 
 export type ProductDSO = z.infer<typeof addProductSchema>;

@@ -1,4 +1,4 @@
-import { ProductModel } from "../../../data/model/product.model";
+import { ProductModel } from "@/data/model/product.model";
 
 export interface IProductRepository {
   getProducts(query: string): Promise<ProductModel[]>;

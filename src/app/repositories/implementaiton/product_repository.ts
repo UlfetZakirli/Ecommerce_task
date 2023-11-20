@@ -1,12 +1,12 @@
-import { ProductModel } from "../../../data/model/product.model";
+import { ProductModel } from "@/data/model/product.model";
 import {
   addProductService,
   deleteProductService,
   getProductService,
   getProductsService,
   updateProductService,
-} from "../../services/product.service";
-import { IProductRepository } from "../abstraction/i_product_repository";
+} from "@/app/services/product.service";
+import { IProductRepository } from "@/app/repositories/abstraction/i_product_repository";
 
 class ProductRepository implements IProductRepository {
   getProducts(query: string): Promise<ProductModel[]> {

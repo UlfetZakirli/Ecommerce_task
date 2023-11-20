@@ -1,5 +1,4 @@
-import React from 'react'
-import Header from '../containers/Header'
+import Header from '@/ui/containers/Header/index'
 import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 import Footer from '../containers/Footer'

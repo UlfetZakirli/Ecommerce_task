@@ -1,6 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { ERevalidateTags } from '../../data/enums/revalidate_tags.enum'
-import product_repository from '../repositories/implementaiton/product_repository'
+import { ERevalidateTags } from '@/data/enums/revalidate_tags.enum'
+import product_repository from "@/app/repositories/implementaiton/product_repository"
 import { toast } from 'react-toastify'
 
 export const useProducts = (query: string) => {

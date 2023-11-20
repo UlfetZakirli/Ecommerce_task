@@ -1,4 +1,4 @@
-import Toast from "src/ui/shared/Toast"
+import Toast from "@/ui/shared/Toast"
 
 const HomePage = () => {
   return (

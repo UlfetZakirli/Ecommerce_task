@@ -1,5 +1,11 @@
 {
   "app_title": "Shopping",
   "product_list": "Product List",
-  "add_product": "Add Product"
+  "add_product": "Add Product",
+  "delete_success": "🚀 Product deleted successfully!",
+  "add_success": "📬 Product added successfully!",
+  "edit_success": "📝 Product updated successfully!",
+  "delete_action": "Delete",
+  "edit_action": "Edit",
+  "back_to_list": "Back to Product List"
 }

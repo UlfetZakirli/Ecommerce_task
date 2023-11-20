@@ -1,4 +1,4 @@
-import { ProductModel } from "src/data/model/product.model";
+import { ProductModel } from "@/data/model/product.model";
 
 export type ProductFormType = {
   product: ProductModel;

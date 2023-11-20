@@ -1,10 +1,12 @@
-import ProductCard from '../../components/ProductCard'
-import { useDeleteProduct, useProducts } from '../../../app/api/productApi'
-import Search from 'src/ui/shared/Search'
+import ProductCard from '@/ui/components/ProductCard'
+import { useDeleteProduct, useProducts } from '@/app/api/productApi'
+import Search from '@/ui/shared/Search'
 import { useState } from 'react'
 import { toast } from 'react-toastify'
+import { useTranslation } from 'react-i18next'
 
 const ProductList = () => {
+    const { t } = useTranslation()
     const [searchValue, setSearchValue] = useState<string>("")
     const { data: products, isLoading, isError, error } = useProducts(searchValue)
     const deleteProduct = useDeleteProduct()
@@ -14,7 +16,7 @@ const ProductList = () => {
 
     const deleteHandler = (id: number) => {
         deleteProduct.mutate(id)
-        toast('🚀 Product deleted successfully!')
+        toast(t('delete_success'))
     }
     return (
         <>

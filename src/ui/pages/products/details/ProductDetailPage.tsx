@@ -1,9 +1,10 @@
-import { useProduct } from 'src/app/api/productApi'
-import Shoes from '../../../../data/assets/img/photo-1606107557195-0e29a4b5b4aa.jpg'
+import { useProduct } from '@/app/api/productApi'
+import Shoes from '@/data/assets/img/photo-1606107557195-0e29a4b5b4aa.jpg'
 import { useNavigate, useParams } from 'react-router-dom'
-import { ProductModel } from 'src/data/model/product.model'
+import { useTranslation } from 'react-i18next'
 
 const ProductDetailPage = () => {
+  const { t } = useTranslation()
   const { productId } = useParams()
   const navigate = useNavigate()
   const { data: product, isLoading, isError, error } = useProduct(Number(productId))
@@ -14,7 +15,7 @@ const ProductDetailPage = () => {
   const { description, isNew, price, category } = product
   return (
     <>
-      <button onClick={() => navigate('/products')} className="btn btn-link">Back to Product List</button>
+      <button onClick={() => navigate('/products')} className="btn btn-link">{t('back_to_list')}</button>
       <div className='my-3 flex justify-center'>
         <div className="card w-96 bg-base-100 shadow-xl">
           <figure><img src={Shoes} alt="Shoes" /></figure>
