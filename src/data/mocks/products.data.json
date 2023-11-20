@@ -1,0 +1,26 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "description": "The right pair of shoes can add a lot of points to your overall appearance. overall appearance.",
+      "price": 21010,
+      "category": "Suits",
+      "isNew": false
+    },
+    {
+      "id": 3,
+      "description": "If a dog chews shoes whose shoes does he choose?",
+      "price": 28000,
+      "category": "Trousers",
+      "isNew": true,
+      "productId": "3"
+    },
+    {
+      "id": 4,
+      "description": "If a dog chews shoes whose shoes does he choose?",
+      "price": 5833,
+      "category": "Bags",
+      "isNew": false
+    }
+  ]
+}
