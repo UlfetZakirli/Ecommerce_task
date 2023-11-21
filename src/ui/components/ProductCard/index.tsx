@@ -17,7 +17,7 @@ const ProductCard = ({ id, description, price, category, isNew, deleteHandler }:
                 <div className="card-body">
                     <h2 className="card-title">
                         {category}!
-                        {isNew && <div className="badge badge-secondary">NEW</div>}
+                        {isNew && <div className="badge badge-secondary">{t('new')}</div>}
                     </h2>
                     <p>{`${description.slice(0, 70)}`}</p>
                     <p className="stat-value fo text-base">${price}</p>

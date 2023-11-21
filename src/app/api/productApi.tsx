@@ -4,6 +4,7 @@ import product_repository from "@/app/repositories/implementaiton/product_reposi
 import { toast } from 'react-toastify'
 
 export const useProducts = (query: string) => {
+
     return useQuery({
         queryKey: [ERevalidateTags.PRODUCTS, query],
         queryFn: () => product_repository.getProducts(query),

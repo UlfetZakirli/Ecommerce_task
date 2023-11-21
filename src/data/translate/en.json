@@ -7,5 +7,9 @@
   "edit_success": "📝 Product updated successfully!",
   "delete_action": "Delete",
   "edit_action": "Edit",
-  "back_to_list": "Back to Product List"
+  "back_to_list": "Back to Product List",
+  "next_btn": "Next",
+  "prev_btn": "Prev",
+  "rights": "All right reserved",
+  "new": "New"
 }

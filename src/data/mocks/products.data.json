@@ -3,24 +3,53 @@
     {
       "id": 1,
       "description": "If a dog chews shoes whose shoes does he choose?",
-      "price": 1202,
+      "price": 596002,
+      "category": "B T-shirts",
+      "isNew": true,
+      "productId": "1"
+    },
+    {
+      "id": 3,
+      "description": "If a dog chews shoes whose shoes does he choose?",
+      "price": 28550,
+      "category": "Trousers",
+      "isNew": true
+    },
+    {
+      "id": 4,
+      "description": "If a dog chews shoes whose shoes does he choose?",
+      "price": 1902,
       "category": "T-shirts",
       "isNew": true,
       "productId": "1"
     },
     {
-      "id": 2,
-      "description": "The right pair of shoes can add a lot of points to your overall appearance. overall appearance.",
-      "price": 21010,
-      "category": "Suits",
-      "isNew": false,
-      "productId": "2"
+      "id": 6,
+      "description": "If a dog chews shoes whose shoes does he choose?",
+      "price": 23000,
+      "category": "Trousers",
+      "isNew": true
     },
     {
-      "id": 3,
+      "id": 7,
       "description": "If a dog chews shoes whose shoes does he choose?",
-      "price": 28000,
-      "category": "Trousers",
+      "price": 80202,
+      "category": "T-shirts",
+      "isNew": true,
+      "productId": "1"
+    },
+    {
+      "id": 9,
+      "description": "If a dog chews shoes whose shoes does he choose?",
+      "price": 21000,
+      "category": "A Trousers",
+      "isNew": true
+    },
+    {
+      "id": 10,
+      "description": "If a dog chews shoes whose shoes does he choose?",
+      "price": 38000,
+      "category": "C Trousers",
       "isNew": true
     }
   ]

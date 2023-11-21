@@ -1,14 +1,19 @@
 import ProductCard from '@/ui/components/ProductCard'
 import { useDeleteProduct, useProducts } from '@/app/api/productApi'
 import Search from '@/ui/shared/Search'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { toast } from 'react-toastify'
 import { useTranslation } from 'react-i18next'
+import { ITEM_PER_PAGE } from '@/data/utils/constants'
+import Pagination from '@/ui/components/Pagination'
+import ProductContext from '@/app/context/products/ProductContext'
+
 
 const ProductList = () => {
     const { t } = useTranslation()
     const [searchValue, setSearchValue] = useState<string>("")
-    const { data: products, isLoading, isError, error } = useProducts(searchValue)
+    const { page, sorted } = useContext(ProductContext)
+    const { data: products, isLoading, isError, error } = useProducts(`?q=${searchValue}&_page=${page}&_limit=${ITEM_PER_PAGE}&_sort=${sorted.sortBy}&_order=${sorted.order}`)
     const deleteProduct = useDeleteProduct()
 
     if (isLoading) return 'Loading products...'
@@ -18,6 +23,8 @@ const ProductList = () => {
         deleteProduct.mutate(id)
         toast(t('delete_success'))
     }
+
+
     return (
         <>
             <Search searchValue={searchValue} setSearchValue={setSearchValue} />
@@ -35,6 +42,9 @@ const ProductList = () => {
                         />
                     ))
                 }
+            </div>
+            <div className="text-center my-10">
+                <Pagination />
             </div>
         </>
     )

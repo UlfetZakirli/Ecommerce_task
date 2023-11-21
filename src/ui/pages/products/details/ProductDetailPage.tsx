@@ -22,7 +22,7 @@ const ProductDetailPage = () => {
           <div className="card-body">
             <h2 className="card-title">
               {category}!
-              {isNew && <div className="badge badge-secondary">NEW</div>}
+              {isNew && <div className="badge badge-secondary">{t('new')}</div>}
             </h2>
             <p>{description}</p>
             <p className="stat-value fo text-base">${price}</p>

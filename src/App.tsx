@@ -1,8 +1,8 @@
-import React from 'react'
 import AppRoutes from '@/app/routes'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import Toast from '@/ui/shared/Toast'
+import { ProductProvider } from './app/context/products/ProductContext'
 
 const App = () => {
 
@@ -10,10 +10,12 @@ const App = () => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="h-full w-full">
-        <AppRoutes />
-        <Toast />
-      </div>
+      <ProductProvider>
+        <div className="h-full w-full">
+          <AppRoutes />
+          <Toast />
+        </div>
+      </ProductProvider>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   )

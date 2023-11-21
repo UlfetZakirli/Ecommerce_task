@@ -7,5 +7,9 @@
   "edit_success": "📝 Məhsul uğurla yeniləndi!",
   "delete_action": "Sil",
   "edit_action": "Redaktə et",
-  "back_to_list": "Məhsul siyahısına qayıt"
+  "back_to_list": "Məhsul siyahısına qayıt",
+  "next_btn": "Sonrakı",
+  "prev_btn": "Əvvəlki",
+  "rights": "Bütün hüquqlar qorunur",
+  "new": "Yeni"
 }
