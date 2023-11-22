@@ -10,7 +10,6 @@ export const useProducts = (query: string = '') => {
     return useQuery({
         queryKey: [ERevalidateTags.PRODUCTS, query],
         queryFn: () => {
-            console.log('fetching');
             return product_repository.getProducts(query)
         },
         placeholderData: keepPreviousData,
