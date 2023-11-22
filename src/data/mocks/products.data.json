@@ -45,7 +45,7 @@
     },
     {
       "price": 3043333,
-      "description": "Assumenda labore vol ww some",
+      "description": "Assumenda labore vol ww \n",
       "isNew": true,
       "category": "Trousers",
       "id": 19,
@@ -57,6 +57,13 @@
       "isNew": true,
       "category": "Shoes",
       "id": 20
+    },
+    {
+      "price": 988,
+      "description": "Est enim doloremque",
+      "isNew": true,
+      "category": "Suits",
+      "id": 21
     }
   ]
 }
