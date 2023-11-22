@@ -1,5 +1,6 @@
 import { z, ZodType } from 'zod'
 
+
 export const addProductSchema = z.object({
     id: z.number().optional(),
     price: z.number().min(1, 'Price is required!'),
