@@ -3,8 +3,8 @@ import { useEditProduct, useProduct } from '@/app/api/productApi'
 import { useParams } from 'react-router-dom'
 
 const EditProduct = () => {
-    const { productId } = useParams()
-    const { data: product, isLoading, error, isError, isFetching } = useProduct(Number(productId))
+    const { id } = useParams()
+    const { data: product, isLoading, error, isError, isFetching } = useProduct(Number(id))
     const editProduct = useEditProduct()
 
     if (isFetching) return 'Fetching data...'
@@ -12,7 +12,7 @@ const EditProduct = () => {
     if (isError) return `Error: ${error.message}`
 
     const editHandler = (product: any) => {
-        editProduct.mutate({ productId, ...product })
+        editProduct.mutate({ id, ...product })
     }
 
     return (

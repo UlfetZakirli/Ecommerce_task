@@ -4,7 +4,7 @@ import product_repository from "@/app/repositories/implementaiton/product_reposi
 import { toast } from 'react-toastify'
 import i18n from '../lib/i18next.config'
 import { ProductModel } from '@/data/model/product.model'
-import { ProductDSO } from '@/data/dso/product.ds'
+import { ProductDSO } from '@/data/dso/product.dso'
 
 export const useProducts = (query: string = '') => {
     return useQuery({

@@ -1,5 +1,4 @@
-import { z, ZodType } from 'zod'
-
+import { z } from 'zod'
 
 export const addProductSchema = z.object({
     id: z.number().optional(),

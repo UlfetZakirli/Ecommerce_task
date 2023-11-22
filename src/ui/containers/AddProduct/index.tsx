@@ -1,4 +1,4 @@
-import { ProductDSO } from '@/data/dso/product.ds'
+import { ProductDSO } from '@/data/dso/product.dso'
 import ProductForm from '../ProductForm'
 import { useAddProduct } from '@/app/api/productApi'
 

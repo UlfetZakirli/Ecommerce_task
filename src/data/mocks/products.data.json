@@ -16,10 +16,10 @@
       "id": 14
     },
     {
-      "price": 106,
-      "description": "Aut labore qui modi ",
-      "isNew": true,
-      "category": "Trousers",
+      "price": 10644,
+      "description": "Aut labore qui modi  edited",
+      "isNew": false,
+      "category": "Suits",
       "id": 15
     },
     {
@@ -44,12 +44,19 @@
       "id": 18
     },
     {
-      "price": 30433,
+      "price": 3043333,
       "description": "Assumenda labore vol ww some",
       "isNew": true,
-      "category": "T-shirts",
+      "category": "Trousers",
       "id": 19,
       "productId": "19"
+    },
+    {
+      "price": 293,
+      "description": "Eu iure quo commodo ",
+      "isNew": false,
+      "category": "Suits",
+      "id": 20
     }
   ]
 }
