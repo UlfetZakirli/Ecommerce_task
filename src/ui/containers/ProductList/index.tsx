@@ -2,15 +2,12 @@ import ProductCard from "@/ui/components/ProductCard";
 import { useDeleteProduct, useProducts } from "@/app/api/productApi";
 import Search from "@/ui/shared/Search";
 import { useContext, useState } from "react";
-import { toast } from "react-toastify";
-import { useTranslation } from "react-i18next";
 import { ITEM_PER_PAGE } from "@/data/utils/constants";
 import Pagination from "@/ui/components/Pagination";
 import ProductContext from "@/app/context/products/ProductContext";
 import { useDebounce } from "@/app/hooks/useDebounce";
 
 const ProductList = () => {
-    const { t } = useTranslation();
     const [searchValue, setSearchValue] = useState<string>("");
     const { page, sorted } = useContext(ProductContext);
     const debouncedValue = useDebounce<string>(searchValue, 500)
@@ -33,7 +30,6 @@ const ProductList = () => {
 
     const deleteHandler = (id: number) => {
         deleteProduct.mutate(id);
-        toast(t("delete_success"));
     };
 
     return (
