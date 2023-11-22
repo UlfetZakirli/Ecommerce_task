@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { ProductDSO } from '@/data/dso/product.ds'
 import { addProductSchema } from '@/data/schemas/formValidations/addProductSchema'
 import { ProductFormType } from './productForm'
+import { useCategories } from '@/app/api/categoryApi'
 
 
 const ProductForm = ({ product, handleProduct }: ProductFormType) => {
@@ -20,17 +21,11 @@ const ProductForm = ({ product, handleProduct }: ProductFormType) => {
         }
     })
 
+    const { data: categories, isLoading, isError, error } = useCategories()
 
 
-    // const handleInnerChange = (e) => {
-    //     setInnerValue(
-    //         {
-    //             ...innerValue,
-    //             [e.target.id]: e.target.id === 'isNew'
-    //                 ? e.target.checked
-    //                 : e.target.value
-    //         })
-    // }
+    if (isLoading) return 'Loading...'
+    if (isError) return `Error: ${error}`
 
 
     const submitHandler = (data: ProductDSO) => {
@@ -54,8 +49,6 @@ const ProductForm = ({ product, handleProduct }: ProductFormType) => {
                                         id="description"
                                         rows={3}
                                         {...register('description')}
-                                        // onChange={handleInnerChange}
-                                        // value={innerValue.description}
                                         className="block p-2 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                     />
                                     <div className='text-error text-xs'>{errors.description && errors.description.message}</div>
@@ -97,8 +90,6 @@ const ProductForm = ({ product, handleProduct }: ProductFormType) => {
                                         type="number"
                                         id="price"
                                         {...register('price', { valueAsNumber: true })}
-                                        // value={innerValue.price}
-                                        // onChange={handleInnerChange}
                                         autoComplete="family-name"
                                         className="block p-1 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 h-8"
                                     />
@@ -114,16 +105,14 @@ const ProductForm = ({ product, handleProduct }: ProductFormType) => {
                                     <select
                                         id="category"
                                         {...register('category')}
-                                        // onChange={handleInnerChange}
-                                        // autoComplete="country-name"
                                         className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                                     >
                                         <option value="" hidden>Categories</option>
-                                        <option>Shoes</option>
-                                        <option>T-shirts</option>
-                                        <option>Suits</option>
-                                        <option>Bags</option>
-                                        <option>Trousers</option>
+                                        {
+                                            categories?.map(({ category, id }) => (
+                                                <option key={id}>{category}</option>
+                                            ))
+                                        }
                                     </select>
                                     <div className='text-error text-xs'>{errors.category && errors.category.message}</div>
                                 </div>
@@ -139,7 +128,6 @@ const ProductForm = ({ product, handleProduct }: ProductFormType) => {
                                             id="isNew"
                                             {...register('isNew')}
                                             type="checkbox"
-                                            // onChange={handleInnerChange}
                                             className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                                         />
                                     </div>

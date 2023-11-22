@@ -14,7 +14,6 @@ const Pagination = () => {
 
     const pageCount = Math.ceil(products?.length / ITEM_PER_PAGE)
     const pages = Array.from(Array(pageCount).keys()).map(page => ++page)
-    console.log(page);
 
 
     return (

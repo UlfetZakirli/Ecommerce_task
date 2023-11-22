@@ -3,7 +3,7 @@
     {
       "id": 1,
       "description": "If a dog chews shoes whose shoes does he choose?",
-      "price": 596002,
+      "price": 5967,
       "category": "B T-shirts",
       "productId": "1",
       "isNew": true
@@ -49,11 +49,18 @@
       "isNew": true
     },
     {
-      "price": 110,
-      "description": "Aliqua Sed voluptat",
-      "isNew": true,
-      "category": "Suits",
+      "price": 486,
+      "description": "Sint rerum voluptat",
+      "isNew": false,
+      "category": "Shoes",
       "id": 11
+    },
+    {
+      "price": 268,
+      "description": "Nulla dolore minus n",
+      "isNew": false,
+      "category": "T-shirts",
+      "id": 12
     }
   ]
 }

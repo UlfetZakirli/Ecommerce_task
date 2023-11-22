@@ -20,7 +20,7 @@ const ProductCard = ({ id, description, price, category, isNew, deleteHandler }:
                         {isNew && <div className="badge badge-secondary">{t('new')}</div>}
                     </h2>
                     <p>{`${description.slice(0, 70)}`}</p>
-                    <p className="stat-value fo text-base">${price}</p>
+                    <p className="stat-value fo text-base">${price.toLocaleString()}</p>
                     <div className="card-actions justify-end relative">
                         <DoubleChevronSVG className='absolute left-0 right-0 top-2 cursor-pointer' onClick={() => navigate(`/products/${id}`)} />
                         <button onClick={() => navigate(`/editProduct/${id}`)} className="btn btn-success">{t('edit_action')}</button>

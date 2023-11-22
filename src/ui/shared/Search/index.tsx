@@ -6,13 +6,10 @@ const Search = ({ searchValue, setSearchValue }: TSearch) => {
     const { sorted, setSorted } = useContext(ProductContext)
 
     const handleSortProduct = (selectValue: string) => {
-        console.log(selectValue);
         setSorted({ ...sorted, sortBy: selectValue.toLowerCase() })
     }
     const handleOrderProduct = (searchValue: string) => {
-        console.log(searchValue);
         setSorted({ ...sorted, order: searchValue.toLowerCase() })
-
     }
 
     return (

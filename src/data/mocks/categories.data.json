@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "category": "T-shirts"
+    },
+    {
+      "id": 2,
+      "category": "Shoes"
+    },
+    {
+      "id": 3,
+      "category": "Trousers"
+    },
+    {
+      "id": 4,
+      "category": "Suits"
+    },
+    {
+      "id": 5,
+      "category": "Bages"
+    }
+  ]
+}

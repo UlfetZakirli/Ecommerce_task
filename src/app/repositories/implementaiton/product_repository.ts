@@ -22,7 +22,6 @@ class ProductRepository implements IProductRepository {
     return deleteProductService(id);
   }
   updateProduct(product: any): Promise<unknown> {
-    console.log("repo", product);
     return updateProductService(product);
   }
 }

@@ -6,8 +6,12 @@ import { toast } from 'react-toastify'
 export const useProducts = (query: string = '') => {
     return useQuery({
         queryKey: [ERevalidateTags.PRODUCTS, query],
-        queryFn: () => product_repository.getProducts(query),
-        placeholderData: keepPreviousData
+        queryFn: () => {
+            console.log('fetching');
+            return product_repository.getProducts(query)
+        },
+        placeholderData: keepPreviousData,
+
     })
 }
 

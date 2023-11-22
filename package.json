@@ -4,11 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"vite\" \"npm run json-server\"",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "json-server": "json-server -w ./src/data/mocks/products.data.json -p 8000"
+    "json-server": "concurrently \"npm run server1\" \"npm run server2\"",
+    "server1": "json-server -w ./src/data/mocks/products.data.json -p 8000",
+    "server2": "json-server -w ./src/data/mocks/categories.data.json -p 5000"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",

@@ -1,8 +1,14 @@
 import axios from "axios";
-import { baseURL } from "@/data/utils/environments";
+import {
+  baseURL_CATEGORIES,
+  baseURL_PRODUCTS,
+} from "@/data/utils/environments";
 
-const axiosInstance = axios.create({
-  baseURL,
+export const axiosProduct = axios.create({
+  baseURL: baseURL_PRODUCTS,
 });
 
-export default axiosInstance;
+export const axiosCategory = axios.create({
+  baseURL: baseURL_CATEGORIES,
+});
+
