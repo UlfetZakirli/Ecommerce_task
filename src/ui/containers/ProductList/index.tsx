@@ -13,11 +13,14 @@ const ProductList = () => {
     const { t } = useTranslation()
     const [searchValue, setSearchValue] = useState<string>("")
     const { page, sorted } = useContext(ProductContext)
-    const { data: products, isLoading, isError, error } = useProducts(`?q=${searchValue}&_page=${page}&_limit=${ITEM_PER_PAGE}&_sort=${sorted.sortBy}&_order=${sorted.order}`)
+    const { data: products, isLoading, isError, error, isFetching, } = useProducts(`?q=${searchValue}&_page=${page}&_limit=${ITEM_PER_PAGE}&_sort=${sorted.sortBy}&_order=${sorted.order}`)
     const deleteProduct = useDeleteProduct()
 
     if (isLoading) return 'Loading products...'
     if (isError) return `Error: ${error}`
+    if (isFetching) {
+        console.log('Fetching');
+    }
 
     const deleteHandler = (id: number) => {
         deleteProduct.mutate(id)

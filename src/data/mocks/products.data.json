@@ -5,37 +5,33 @@
       "description": "If a dog chews shoes whose shoes does he choose?",
       "price": 596002,
       "category": "B T-shirts",
-      "isNew": true,
-      "productId": "1"
+      "productId": "1",
+      "isNew": true
     },
     {
       "id": 3,
       "description": "If a dog chews shoes whose shoes does he choose?",
       "price": 28550,
-      "category": "Trousers",
-      "isNew": true
+      "category": "Trousers"
     },
     {
       "id": 4,
       "description": "If a dog chews shoes whose shoes does he choose?",
       "price": 1902,
       "category": "T-shirts",
-      "isNew": true,
       "productId": "1"
     },
     {
       "id": 6,
       "description": "If a dog chews shoes whose shoes does he choose?",
       "price": 23000,
-      "category": "Trousers",
-      "isNew": true
+      "category": "Trousers"
     },
     {
       "id": 7,
       "description": "If a dog chews shoes whose shoes does he choose?",
       "price": 80202,
-      "category": "T-shirts",
-      "isNew": true,
+      "category": "Suits",
       "productId": "1"
     },
     {
@@ -51,6 +47,13 @@
       "price": 38000,
       "category": "C Trousers",
       "isNew": true
+    },
+    {
+      "price": 110,
+      "description": "Aliqua Sed voluptat",
+      "isNew": true,
+      "category": "Suits",
+      "id": 11
     }
   ]
 }

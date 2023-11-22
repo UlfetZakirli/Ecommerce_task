@@ -1,20 +1,20 @@
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
+import { useQuery, useMutation, useQueryClient, keepPreviousData } from '@tanstack/react-query'
 import { ERevalidateTags } from '@/data/enums/revalidate_tags.enum'
 import product_repository from "@/app/repositories/implementaiton/product_repository"
 import { toast } from 'react-toastify'
 
-export const useProducts = (query: string) => {
-
+export const useProducts = (query: string = '') => {
     return useQuery({
         queryKey: [ERevalidateTags.PRODUCTS, query],
         queryFn: () => product_repository.getProducts(query),
+        placeholderData: keepPreviousData
     })
 }
 
 export const useProduct = (id: number) => {
     return useQuery({
         queryKey: [ERevalidateTags.PRODUCT],
-        queryFn: () => product_repository.getProduct(id)
+        queryFn: () => product_repository.getProduct(id),
     })
 }
 
