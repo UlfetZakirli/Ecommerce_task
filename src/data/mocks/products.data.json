@@ -6,225 +6,50 @@
       "price": 28550,
       "category": "Trousers",
       "productId": "3",
-      "isNew": false
-    },
-    {
-      "id": 10,
-      "description": "If a dog chews shoes whose shoes does he choose?",
-      "price": 380003,
-      "category": "C Trousers",
-      "isNew": true,
-      "productId": "10"
-    },
-    {
-      "price": 486,
-      "description": "Sint rerum voluptat",
-      "isNew": false,
-      "category": "Shoes",
-      "id": 11
-    },
-    {
-      "price": 268,
-      "description": "Nulla dolore minus n",
-      "isNew": false,
-      "category": "T-shirts",
-      "id": 12
-    },
-    {
-      "price": 181,
-      "description": "Fugiat adipisci ill",
-      "isNew": false,
-      "category": "Shoes",
-      "id": 13
+      "isNew": true
     },
     {
       "price": 807,
       "description": "Sunt quia quam deser",
       "isNew": false,
-      "category": "Bages",
+      "category": "T-shirts",
       "id": 14
     },
     {
       "price": 106,
       "description": "Aut labore qui modi ",
-      "isNew": false,
+      "isNew": true,
       "category": "Trousers",
       "id": 15
     },
     {
-      "price": 583,
+      "price": 5831,
       "description": "Lorem recusandae Re",
       "isNew": false,
       "category": "Trousers",
       "id": 16
     },
     {
-      "price": 446,
+      "price": 4460,
       "description": "Irure aut dolore ab ",
       "isNew": false,
       "category": "Suits",
       "id": 17
     },
     {
-      "price": 236,
+      "price": 23602,
       "description": "Et aut Nam elit ad",
       "isNew": true,
       "category": "T-shirts",
       "id": 18
     },
     {
-      "price": 811,
-      "description": "Saepe molestiae offi",
-      "isNew": false,
-      "category": "T-shirts",
-      "id": 19
-    },
-    {
-      "price": 853,
-      "description": "Veritatis lorem dolo",
+      "price": 30433,
+      "description": "Assumenda labore vol ww some",
       "isNew": true,
       "category": "T-shirts",
-      "id": 20
-    },
-    {
-      "price": 664,
-      "description": "Id veniam repudian",
-      "isNew": true,
-      "category": "T-shirts",
-      "id": 21
-    },
-    {
-      "price": 576,
-      "description": "Minim et excepteur a",
-      "isNew": false,
-      "category": "Suits",
-      "id": 22
-    },
-    {
-      "price": 783,
-      "description": "Dolor sed nulla odio",
-      "isNew": true,
-      "category": "Bages",
-      "id": 23
-    },
-    {
-      "price": 704,
-      "description": "Laborum ipsa numqua",
-      "isNew": true,
-      "category": "Shoes",
-      "id": 24
-    },
-    {
-      "price": 638,
-      "description": "Adipisci labore cill",
-      "isNew": false,
-      "category": "Shoes",
-      "id": 25
-    },
-    {
-      "price": 384,
-      "description": "Quae voluptas iste i",
-      "isNew": false,
-      "category": "T-shirts",
-      "id": 26
-    },
-    {
-      "price": 840,
-      "description": "Ad repudiandae eum e",
-      "isNew": true,
-      "category": "Trousers",
-      "id": 27
-    },
-    {
-      "price": 689,
-      "description": "Deserunt dolor labor",
-      "isNew": false,
-      "category": "T-shirts",
-      "id": 28
-    },
-    {
-      "price": 404,
-      "description": "Ut veritatis et et f",
-      "isNew": true,
-      "category": "Shoes",
-      "id": 29
-    },
-    {
-      "price": 735,
-      "description": "Repudiandae molestia",
-      "isNew": false,
-      "category": "Trousers",
-      "id": 30
-    },
-    {
-      "price": 404,
-      "description": "Quam sed lorem est e",
-      "isNew": false,
-      "category": "Bages",
-      "id": 31
-    },
-    {
-      "price": 25,
-      "description": "Nulla perferendis si",
-      "isNew": false,
-      "category": "Shoes",
-      "id": 32
-    },
-    {
-      "price": 762,
-      "description": "Sed sunt dolores ul",
-      "isNew": true,
-      "category": "Trousers",
-      "id": 33
-    },
-    {
-      "price": 512,
-      "description": "Animi nobis officii",
-      "isNew": false,
-      "category": "Suits",
-      "id": 34
-    },
-    {
-      "price": 102,
-      "description": "Incididunt qui rerum",
-      "isNew": true,
-      "category": "Shoes",
-      "id": 35
-    },
-    {
-      "price": 569,
-      "description": "Est repudiandae inci",
-      "isNew": true,
-      "category": "Suits",
-      "id": 36
-    },
-    {
-      "price": 17,
-      "description": "Est et adipisci fug",
-      "isNew": false,
-      "category": "Bages",
-      "id": 39
-    },
-    {
-      "price": 419,
-      "description": "Libero dolore quasi ",
-      "isNew": false,
-      "category": "Suits",
-      "id": 40
-    },
-    {
-      "price": 393,
-      "description": "Quas quasi molestiae",
-      "isNew": false,
-      "category": "T-shirts",
-      "id": 41
-    },
-    {
-      "price": 645,
-      "description": "Aut quaerat veniam ",
-      "isNew": false,
-      "category": "T-shirts",
-      "id": 42
+      "id": 19,
+      "productId": "19"
     }
   ]
 }

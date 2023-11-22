@@ -19,13 +19,10 @@ const ProductList = () => {
     } = useProducts(
         `?q=${debouncedValue}&_page=${page}&_limit=${ITEM_PER_PAGE}&_sort=${sorted.sortBy}&_order=${sorted.order}`,
     );
-
-
     const deleteProduct = useDeleteProduct();
 
     if (isLoading) return "Loading products...";
     if (isError) return `Error: ${error}`;
-  
 
 
     const deleteHandler = (id: number) => {
@@ -49,7 +46,7 @@ const ProductList = () => {
                 ))}
             </div>
             <div className="text-center my-10">
-                <Pagination />
+                <Pagination debouncedValue={debouncedValue} />
             </div>
         </>
     );

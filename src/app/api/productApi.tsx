@@ -14,7 +14,6 @@ export const useProducts = (query: string = '') => {
             return product_repository.getProducts(query)
         },
         placeholderData: keepPreviousData,
-
     })
 }
 
@@ -33,7 +32,7 @@ export const useAddProduct = () => {
             await queryClient.cancelQueries({ queryKey: [ERevalidateTags.PRODUCTS] })
             const prevProducts = queryClient.getQueryData([ERevalidateTags.PRODUCTS])
             queryClient.setQueryData([ERevalidateTags.PRODUCTS], (oldProducts: ProductModel[]) => {
-                return oldProducts ? [{ ...product, id: 101 }, ...oldProducts] : [{ ...product, id: 100 }]
+                return oldProducts ? [{ ...product, id: 100 }, ...oldProducts] : [{ ...product, id: 100 }]
             })
             console.log({ prevProducts });
             return { prevProducts }
@@ -86,16 +85,14 @@ export const useEditProduct = () => {
             await queryClient.cancelQueries({ queryKey: [ERevalidateTags.PRODUCTS] })
             const prevProducts = queryClient.getQueryData([ERevalidateTags.PRODUCTS])
             queryClient.setQueryData([ERevalidateTags.PRODUCTS], (oldProducts: ProductDSO[]) => {
-                return oldProducts && [{ id: 11, ...product }, ...oldProducts]
+                return oldProducts && [{ id: 100, ...product }, ...oldProducts]
             })
             return { prevProducts }
-
         },
         onError: (_error, _variable, context) => {
             toast.error(i18n.t('edit_error'))
             queryClient.setQueryData([ERevalidateTags.PRODUCTS], context?.prevProducts)
             console.log(_error);
-
         },
         onSuccess: () => {
             toast.success(i18n.t('edit_success'))

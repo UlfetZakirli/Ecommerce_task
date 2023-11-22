@@ -25,7 +25,7 @@ const ProductDetailPage = () => {
               {isNew && <div className="badge badge-secondary">{t('new')}</div>}
             </h2>
             <p>{description}</p>
-            <p className="stat-value fo text-base">${price}</p>
+            <p className="stat-value fo text-base">${price.toLocaleString()}</p>
           </div>
         </div>
       </div>

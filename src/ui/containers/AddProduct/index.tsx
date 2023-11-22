@@ -1,9 +1,10 @@
+import { ProductDSO } from '@/data/dso/product.ds'
 import ProductForm from '../ProductForm'
 import { useAddProduct } from '@/app/api/productApi'
 
 const AddProduct = () => {
     const addProduct = useAddProduct()
-    const handleAddProduct = (product: any) => {
+    const handleAddProduct = (product: ProductDSO) => {
         addProduct.mutate(product)
     }
     return (

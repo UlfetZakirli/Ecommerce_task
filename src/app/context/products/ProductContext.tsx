@@ -6,7 +6,7 @@ const ProductContext = createContext<ProductContextType | null>(null)
 export const ProductProvider = ({ children }: ContextPropsType) => {
     const [page, setPage] = useState<number>(1)
     const [sorted, setSorted] = useState<SortedType>({
-        sortBy: '',
+        sortBy: "",
         order: "",
     })
 
