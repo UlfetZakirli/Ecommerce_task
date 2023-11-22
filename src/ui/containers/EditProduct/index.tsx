@@ -1,5 +1,6 @@
 import ProductForm from '../ProductForm'
 import { useEditProduct, useProduct } from '@/app/api/productApi'
+import { ProductDSO } from '@/data/dso/product.dso'
 import { useParams } from 'react-router-dom'
 
 const EditProduct = () => {
@@ -11,7 +12,7 @@ const EditProduct = () => {
     if (isLoading) return 'Loading...'
     if (isError) return `Error: ${error.message}`
 
-    const editHandler = (product: any) => {
+    const editHandler = (product: ProductDSO) => {
         editProduct.mutate({ id, ...product })
     }
 

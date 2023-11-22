@@ -7,6 +7,7 @@ import {
   updateProductService,
 } from "@/app/services/product.service";
 import { IProductRepository } from "@/app/repositories/abstraction/i_product_repository";
+import { ProductDSO } from "@/data/dso/product.dso";
 
 class ProductRepository implements IProductRepository {
   getProducts(query: string): Promise<ProductModel[]> {
@@ -15,13 +16,13 @@ class ProductRepository implements IProductRepository {
   getProduct(id: number): Promise<ProductModel> {
     return getProductService(id);
   }
-  addProduct(product: any): Promise<unknown> {
+  addProduct(product: ProductDSO): Promise<unknown> {
     return addProductService(product);
   }
   deleteProduct(id: number): Promise<unknown> {
     return deleteProductService(id);
   }
-  updateProduct(product: any): Promise<unknown> {
+  updateProduct(product: ProductDSO): Promise<unknown> {
     return updateProductService(product);
   }
 }
