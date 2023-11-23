@@ -16,7 +16,7 @@ const Pagination = ({ debouncedValue }: { debouncedValue: string }) => {
   const pages = Array.from(Array(pageCount).keys()).map((page) => ++page);
 
   if (pageCount === 1) {
-    setTimeout(() => setPage(pageCount), 200)
+    setTimeout(() => setPage(pageCount), 1)
   }
 
 
