@@ -30,13 +30,6 @@
       "id": 16
     },
     {
-      "price": 4460,
-      "description": "Irure aut dolore ab ",
-      "isNew": false,
-      "category": "Suits",
-      "id": 17
-    },
-    {
       "price": 23602,
       "description": "Et aut Nam elit ad",
       "isNew": true,
@@ -64,6 +57,13 @@
       "isNew": true,
       "category": "Suits",
       "id": 21
+    },
+    {
+      "price": 800,
+      "description": "Officiis ut nisi dol",
+      "isNew": true,
+      "category": "Suits",
+      "id": 22
     }
   ]
 }
