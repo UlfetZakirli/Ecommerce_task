@@ -64,6 +64,13 @@
       "isNew": true,
       "category": "Suits",
       "id": 22
+    },
+    {
+      "price": 825,
+      "description": "Et consequatur Accu",
+      "isNew": false,
+      "category": "Suits",
+      "id": 23
     }
   ]
 }

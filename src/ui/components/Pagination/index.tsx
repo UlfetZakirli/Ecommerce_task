@@ -1,7 +1,7 @@
 import { useProducts } from "@/app/api/productApi";
 import ProductContext from "@/app/context/products/ProductContext";
 import { ITEM_PER_PAGE } from "@/data/utils/constants";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { useTranslation } from "react-i18next";
 
 const Pagination = ({ debouncedValue }: { debouncedValue: string }) => {
@@ -15,9 +15,13 @@ const Pagination = ({ debouncedValue }: { debouncedValue: string }) => {
   const pageCount = Math.ceil((products?.length) / ITEM_PER_PAGE);
   const pages = Array.from(Array(pageCount).keys()).map((page) => ++page);
 
-  if (pageCount === 1) {
-    setTimeout(() => setPage(pageCount), 1)
+  if (page > pageCount || pageCount === 1) {
+    setTimeout(() => setPage(1), 1)
   }
+  console.log({ page });
+  console.log({ pageCount });
+  console.log({ pages });
+
 
 
   return (
